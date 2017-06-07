@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>99乘法表</title>
+</head>
+<body style="margin: 0 auto ;">
+<script>
+for(var r=0;r<=9;r++){
+	for(var i=1,str="";i<=r;i++){
+		str+=i+"x"+r+"="+i*r+" ";
+	}
+	console.log(str);
+}
+	var tab = document.createElement('div');
+	
+	tab.style.textAlign='center';
+	for(var i = 1; i <=9 ; i++){
+		var tr = document.createElement('div');	
+		tr.style.textAlign='center';
+		tab.appendChild(tr);
+		var txt = document.createElement('text');	
+		txt.style.margin="auto";
+		tr.appendChild(txt);
+	for(var j = 1,str=""; j<=i ; j++){
+		str=j+"x"+i+"="+i*j+" ";
+		var td = document.createElement('span');
+		td.style.borderTop = '1px solid black';
+		td.style.borderRight = '1px solid black';
+		td.style.padding = '10px 20px';
+		td.style.verticalAlign = 'middle';
+		td.style.display = 'inline-block';
+		td.style.fontSize = '20px';
+				
+		if( j == 1){
+			td.style.borderLeft = '1px solid black';
+		}
+		if(i == 9){
+			td.style.borderBottom = '1px solid black';	
+		}
+		
+		td.innerHTML=str;
+		txt.appendChild(td);
+	}
+}
+document.body.appendChild(tab);
+
+</script> 
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>99乘法表</title>
+</head>
+<body>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> 
+	<input id = "arr_text" type="text" name = "number" placeholder = "输入数组" value="1,4,5,23,2,17,24,10000000">
+	<input id ="sort" type="button" value = "排序">
+	<text id="sortval"></text>
+<script>
+$("#sort").on('click',function(){
+	$number = $("#arr_text").val();
+	console.log(typeof $number);
+	var num = $number.split(',');
+	var len = num.length;
+	var left=[],right=[];
+	//先找到最大值
+	//将最大值插入到数组的中间INDEX = N/2
+	//再将左边从小到大排序，右边从大到小排序
+	for(var i = 0; i<len; i++){
+		if(i < len/2){
+			left.unshift(num[i]);
+		}else{
+			right.push(num[i]);
+		}
+	}
+	left.sort(function(a,b){ return a-b});
+	right.sort(function(a,b){ return b-a});
+	
+	$("#sortval").html(left.concat(right).join(','));
+});
+
+
+
+</script> 
+</body>
+</html>
