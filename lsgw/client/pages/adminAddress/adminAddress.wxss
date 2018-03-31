@@ -1,0 +1,59 @@
+.address-conteiner{
+  width:100%;
+  height:100%;
+  background-color:#f3f3f3;
+}
+.address-public{
+  padding:12px 20rpx;
+  font-size:14px;
+}
+.address-right{
+  text-align: right;
+}
+.address-title{
+  background-color:#fff;
+}
+.address-info{
+  background-color:#fff;
+  margin-top:4px;
+}
+.address-btn-group{
+  position: fixed;
+  padding:10px 50rpx;
+  width:100%;
+  left:0;
+  bottom:0;
+}
+.address-btn{
+  background-color:#63B8FF;
+  color:#fff;
+}
+.admin-public{
+  position: relative;
+  height:40px;
+  background-color:#fff;
+  margin-top:2px;
+}
+.img-group{
+  height:40px;
+  width:56rpx;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.img-icon{
+  width: 34rpx;
+  height:34rpx;
+}
+.admin-btn{
+  height:40px;
+  font-size:14px;
+  color:#444;
+  line-height: 40px;
+}
+.admin-btn-active{
+  color:orange;
+}
+.icon1{
+  margin-left:320rpx;
+}

@@ -1,0 +1,30 @@
+<template name="index$92402b24">
+  <view class="_div data-v-542b14b4 integdetail-container">
+    <view class="_div data-v-542b14b4 tab-bar">
+      <view class="_div data-v-542b14b4 tab-item {{(isselected == 0)? 'selected' : ' '}}"
+        bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">收入</view>
+      <view class="_div data-v-542b14b4 tab-item {{(isselected == 1)? 'selected' : ' '}}"
+        bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">支出</view>
+    </view>
+    <view class="_div data-v-542b14b4 list-container" hidden="{{!(isselected == 0)}}">
+      <view class="_div data-v-542b14b4 list-item" wx:key="item.index" key="{{item.index}}"
+        wx:for="{{income}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-542b14b4 list-left">
+          <view class="_div data-v-542b14b4 list-text">{{item.source}}：{{item.way}}</view>
+          <view class="_div data-v-542b14b4 list-date">{{item.date}}</view>
+        </view>
+        <view class="_div data-v-542b14b4 list-right" style="color: red">+{{item.val}}</view>
+      </view>
+    </view>
+    <view class="_div data-v-542b14b4 list-container" hidden="{{!(isselected == 1)}}">
+      <view class="_div data-v-542b14b4 list-item" wx:key="item.index" key="{{item.index}}"
+        wx:for="{{expend}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-542b14b4 list-left">
+          <view class="_div data-v-542b14b4 list-text">{{item.source}}：{{item.way}}</view>
+          <view class="_div data-v-542b14b4 list-date">{{item.date}}</view>
+        </view>
+        <view class="_div data-v-542b14b4 list-right" style="color: green">-{{item.val}}</view>
+      </view>
+    </view>
+  </view>
+</template>

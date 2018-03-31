@@ -1,0 +1,34 @@
+<view class="address-conteiner">
+  <view>
+    <view class="address-info">
+    <view class="clear">
+      <view class="col-xs-6 address-public">小明</view>
+      <view class="col-xs-6 address-public address-right">18093566952</view>
+    </view>
+    <view class="address-public">这是一个收货地址</view>
+    </view>
+    <view class="address-btn-group">
+      <button class="address-btn">添加新地址</button>
+    </view>
+    <view class="admin-public flex">
+        <view class="flex"  bindtap="defaultBtn">
+          <view class="img-group">
+            <image src="{{defaultFlag == 0?'../images/admin-ok.png':'../images/admin-no.png'}}" class="img-icon"></image>
+          </view>
+          <view class="admin-btn {{defaultFlag == 0?'admin-btn-active':''}}">设为默认</view>
+        </view>
+        <view class="flex icon1">
+          <view class="img-group">
+            <image src='../images/admin-write.png' class="img-icon"></image>
+          </view>
+          <view class="admin-btn">编辑</view>
+        </view>
+        <view class="flex">
+          <view class="img-group">
+            <image src='../images/admin-deltet.png' class="img-icon"></image>
+          </view>
+          <view class="admin-btn">删除</view>
+        </view>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,28 @@
+<view class="location-container">
+  <view class="location-group clear"  style="position:relative;">
+    <view class="location-box flex-center col-xs-2">
+      <image class="local-icon" src='../images/admin-username.png'></image>
+    </view>
+    <view class="location-box col-xs-10 {{tplType?'location-border':'location-border1'}}">
+      <input placeholder="注册或绑定手机号" bindinput="getTpl" class="location-input"></input>
+    </view>
+    <view class="{{tplType1?'tpl-alert-hidden':'tpl-alert'}}">
+      <view class="alert-icon"></view>
+      手机号错误
+    </view>
+  </view>
+  <view class="location-group clear">
+    <view class="location-box flex-center col-xs-2">
+      <image class="local-icon" src='../images/location-code.png'></image>
+    </view>
+    <view class="location-box col-xs-6 location-border">
+      <input placeholder="短信动态码" bindinput="getPasswardInput" class="location-input"></input>
+    </view>
+    <view class="location-box col-xs-4 location-border" style="position:relative;">
+      <button catchtap="getPassward" class="pas-btn">{{entryText}}</button>
+    </view>   
+  </view>
+  <view class="location-box box1">
+    <button class="location-btn" bindtap="submitBtn">登录</button>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="address-conteiner">
+  <view class="address-title clear">
+    <view class="col-xs-6 address-public">收货地址</view>
+    <view class="col-xs-6 address-public address-right" bindtap='toadminaddress'>管理</view>
+  </view>
+  <view class="address-info">
+    <view class="clear">
+      <view class="col-xs-6 address-public">小明</view>
+      <view class="col-xs-6 address-public address-right">18093566952</view>
+    </view>
+    <view class="address-public">这是一个收货地址</view>
+  </view>
+  <view class="address-btn-group">
+    <button class="address-btn" bindtap='toaddressdetail'>添加新地址</button>
+  </view>
+</view>

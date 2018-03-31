@@ -1,0 +1,123 @@
+{
+	"client": "./client",
+	"svr": "./server",
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wxf7504ab9eb70aa55",
+	"projectname": "ls",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 14,
+			"list": [
+				{
+					"id": -1,
+					"name": "activity",
+					"pathName": "pages/activity/activity",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "signup",
+					"pathName": "pages/signup/signup",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mall",
+					"pathName": "pages/mall/mall",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/address/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "adminAddress",
+					"pathName": "pages/adminAddress/adminAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "location",
+					"pathName": "pages/location/location",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "signdown",
+					"pathName": "pages/signdown/signdown",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "person",
+					"pathName": "pages/person/person",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "addressdetail",
+					"pathName": "pages/addressdetail/addressdetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "integral",
+					"pathName": "pages/integral/integral",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myactivity",
+					"pathName": "pages/myactivity/myactivity",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myorder",
+					"pathName": "pages/myorder/myorder",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,38 @@
+.signup-title{
+  height:200rpx;
+  background: -webkit-linear-gradient(left,#95cfff,#f2defe);
+  position: relative;
+  line-height: 200rpx;
+  padding-left:60rpx;
+  color:#fff;
+  font-size:16px;
+}
+.signup-img{
+  width:120rpx;
+  height:120rpx;
+  border-radius:100%;
+  position: absolute;
+  top:50%;
+  right:90rpx;
+  margin-top:-60rpx;
+}
+.signup-content{
+  padding:20rpx;
+}
+.textarea{
+  width:100%;
+  font-size:12px;
+  padding:20rpx;
+  box-sizing: border-box;
+  height:100px;
+}
+.up-img{
+  width:80rpx;
+  height:80rpx;
+  margin-left:10rpx;
+}
+.signup-btn{
+  margin-top:16rpx;
+  background: #95cfff;
+  color:white;
+}

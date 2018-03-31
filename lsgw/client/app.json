@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/location/location",
+    "pages/addCgi/addCgi",
+    "pages/activity/activity",
+    "pages/signup/signup",
+    "pages/mall/mall",
+    "pages/order/order",
+    "pages/address/address",
+    "pages/adminAddress/adminAddress",
+    "pages/index/index",
+    "pages/signdown/signdown",
+    "pages/addressdetail/addressdetail",
+    "pages/integdetail/integdetail",
+    "pages/person/person",
+    "pages/integral/integral",
+    "pages/myactivity/myactivity",
+    "pages/test/test",
+    "pages/myorder/myorder"
+  ],
+  "window":{
+    "backgroundColor":"#F6F6F6",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#63B8FF",
+    "navigationBarTitleText": "蓝色港湾",
+    "navigationBarTextStyle":"#fffff"
+  },
+  
+  "tabBar":{
+    "color":"#000",
+    "selectedColor":"#63B8FF",
+    "backgroundColor":"#ffffff",
+    "borderStyle":"black",
+    "list":[
+      {
+        "iconPath":"pages/images/home.png",
+        "selectedIconPath":"pages/images/home-selected.png",
+        "pagePath":"pages/index/index",
+        "text":"首页活动"
+      },
+      {
+        "iconPath": "pages/images/integral.png",
+        "selectedIconPath": "pages/images/integral-selected.png",
+        "pagePath": "pages/mall/mall",
+        "text": "积分商城"
+      },
+      {
+        "iconPath": "pages/images/personal.png",
+        "selectedIconPath": "pages/images/personal-selected.png",
+        "pagePath": "pages/person/person",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

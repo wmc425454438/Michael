@@ -1,0 +1,125 @@
+ul,li,div,h1,h2,h3,h4,h5,span,view,dl,dt,dd,em,i{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+ul,li{
+  list-style: none;
+}
+em,i{
+  font-style: normal;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+.nowarp{
+  flex-wrap: nowrap;
+}
+.warp{
+  flex-wrap: wrap;
+}
+.clearfix{overflow:hidden;_zoom:1;}
+.clear::after{content: "";height:0;display: block;clear: both;visibility: hidden;}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    box-sizing: border-box;    
+    float: left;
+}
+.col-xs-12 {
+    width: 100%;
+}
+.col-xs-11 {
+    width: 91.66666667%;
+}
+.col-xs-10 {
+    width: 83.33333333%;
+}
+.col-xs-9 {
+    width: 75%;
+}
+.col-xs-8 {
+    width: 66.66666667%;
+}
+.col-xs-7 {
+    width: 58.33333333%;
+}
+.col-xs-6 {
+    width: 50%;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-2 {
+    width: 16.66666667%;
+}
+.col-xs-1 {
+    width: 8.33333333%;
+}
+.content-title{
+  font-size:16px;
+  padding:16rpx;
+  color:#676767;
+}
+.contnet-group{
+  padding:0 10rpx;
+  margin-top:16rpx;
+  background-color:#fff;
+  box-shadow: 0 1px 4px #858585;
+}
+.contnet-img{
+  width:730rpx;
+  height:300rpx;
+}
+.contet-list{
+  height:70rpx;
+  position: relative;
+  font-size:12px;
+}
+.list-type{
+  width:100%;
+  height:46rpx;
+  position: relative;
+  top:12rpx;
+  left:0rpx;
+  border-radius: 0 30rpx 30rpx 0;
+  line-height: 46rpx;
+  text-align: center;
+}
+/*报名进行中  */
+.conduct-type{
+  background-color:#4bc5bb;
+  color:white;
+}
+/*报名人数已满  */
+.full-type{
+  background-color:#f45f05;
+  color:white;
+}
+/*活动已结束  */
+.end-type{
+  background-color:#cccccc;
+  color:#676767;
+}
+.list-name{
+  height:70rpx;
+  line-height: 70rpx;
+  font-size:12px;
+  color:#858585;
+  margin-left:8rpx;
+}
+.list-number{
+  height:70rpx;
+  line-height: 70rpx;
+  font-size:12px;
+  color:#ff6f76;
+  padding-left:6rpx;
+}
+.list-time{
+  text-align: right;
+}

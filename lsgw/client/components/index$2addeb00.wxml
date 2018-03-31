@@ -1,0 +1,11 @@
+<template name="index$2addeb00">
+  <view class="_div data-v-0b332338 address-container">
+    <view wx:if="{{!addressList.length}}" class="_div data-v-0b332338 add-address-img">
+      <image src="{{packUrl}}" alt="package image" class="_img data-v-0b332338"></image>
+    </view>
+    <button bindtap="handleProxy" class="_button data-v-0b332338 add-address" data-eventid="{{'0'}}"
+      data-comkey="{{$k}}">
+      添加新的收货地址
+    </button>
+  </view>
+</template>

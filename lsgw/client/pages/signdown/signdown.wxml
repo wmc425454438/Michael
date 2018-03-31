@@ -1,0 +1,12 @@
+<view class="signup-title">
+  报名信息填写
+  <image src='../images/signup-img.png' class="signup-img"></image>
+</view>
+<view class="signup-content">
+  <textarea class="textarea" placeholder='这一刻的想法'></textarea>
+  <view class="flex" style="padding:10rpx;">
+   <image wx:for="{{tempFilePaths}}" src='{{item}}' class="up-img"></image>
+   <image class="up-img" src='../images/updata.png' style="border:1px solid #999"  bindtap="updataImg"></image>
+  </view>
+  <button bindtap="submitBtn" class="signup-btn">提交</button>
+</view>

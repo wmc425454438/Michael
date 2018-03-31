@@ -1,0 +1,19 @@
+<view class="contnet-group" data-id="{{activityId}}" bindtap="showActivity" >
+    <view class="content-box">
+      <view class="content-title">{{dialoagTitle}}</view>
+      <image class="contnet-img" src='{{dialoagPath}}'></image>
+      <view class="clear">
+        <view class="contet-list col-xs-3">
+          <view class="list-type {{conductFlag == '1'?'conduct-type':(endFlag == '1'?'full-type':'end-type')}}">{{conductFlag == '1'?'报名进行中':(endFlag == '1'?'报名人数已满':'活动已结束')}}</view>
+        </view>
+        <view class="contet-list col-xs-5 flex">
+          <view class="list-name">名额:</view>
+          <view class="list-number">{{dialoagName}}</view>
+        </view>
+        <view class="contet-list list-time  col-xs-4 flex">
+          <view class="list-name">时间:</view>
+          <view class="list-number">{{dialoagNumber}}</view>
+        </view>
+      </view>
+    </view>
+  </view>

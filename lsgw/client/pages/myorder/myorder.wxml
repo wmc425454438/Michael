@@ -1,0 +1,196 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on_blue' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider blue-color" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <!-- 等待收货 -->
+        <view class="" hidden="{{activeIndex != 0}}">
+          <block wx:for="{{orders}}" wx:key="{{item.id}}" wx:if="{{item.state === 'deliver'}}">
+            <view class="myorder all">
+              <view class="re-container clear">
+                <view class="col-xs-6 item-left">{{item.date}}</view>
+                <view class="col-xs-6 item-right">{{state[item.state]}}</view>
+              </view>
+              <view class="order-goods clear">
+                <view class="clear">
+                  <view class="order-img-group col-xs-4">
+                    <image src="{{goodsUrl}}" class="goods-img"></image>
+                  </view>
+                  <view class="goods-inifo-text col-xs-6">{{item.describe}}</view>
+                  <view class="goods-inifo-text1 col-xs-2">
+                    <view>{{item.integral}}</view>
+                    <view class="small-text ">x{{item.number}}</view>
+                  </view>
+                </view>
+              </view>
+              <view class="clear" style="padding:5px 0;background-color:#fff;">
+                <view class="text-box">
+                  共
+                  <text style="padding: 0 2px;">{{item.number}}</text>
+                  件   总计：
+                  <text style="padding: 0 2px;">{{item.integral}}</text>
+                </view>
+                <view class="text-box">
+                  <view class="text-box-border" url="{{'../orderdetail/orderdetail?orderid='+item.orderid}}" bindtap="showLogistics">
+                    {{navigator[item.state]}}
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <!-- 交易完成 -->
+        <view class="" hidden="{{activeIndex != 1}}">
+          <block wx:for="{{orders}}" wx:key="{{item.id}}" wx:if="{{item.state === 'ok'}}">
+            <view class="myorder all">
+              <view class="re-container clear">
+                <view class="col-xs-6 item-left">{{item.date}}</view>
+                <view class="col-xs-6 item-right">{{state[item.state]}}</view>
+              </view>
+              <view class="order-goods clear">
+                <view class="clear">
+                  <view class="order-img-group col-xs-4">
+                    <image src="{{goodsUrl}}" class="goods-img"></image>
+                  </view>
+                  <view class="goods-inifo-text col-xs-6">{{item.describe}}</view>
+                  <view class="goods-inifo-text1 col-xs-2">
+                    <view>{{item.integral}}</view>
+                    <view class="small-text ">x{{item.number}}</view>
+                  </view>
+                </view>
+              </view>
+              <view class="clear" style="padding:5px 0;background-color:#fff;">
+                <view class="text-box">
+                  共
+                  <text style="padding: 0 2px;">{{item.number}}</text>
+                  件   总计：
+                  <text style="padding: 0 2px;">{{item.integral}}</text>
+                </view>
+                <view class="text-box">
+                  <view class="text-box-border">{{navigator[item.state]}}</view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <!-- 待收货 -->
+        <!-- <view class="" hidden="{{activeIndex != 2}}">
+          <view class="myorder all" wx:for="{{orders}}" wx:key="{{item.id}}" wx:if="{{item.state === 'receipt'}}">
+            <view class="re-container clear">
+              <view class="col-xs-6 item-left" >{{item.date}}</view>
+              <view class="col-xs-6 item-right">{{state[item.state]}}</view>
+            </view>
+            <view class="order-goods clear">
+              <view class="clear">
+                <view class="order-img-group col-xs-4">
+                  <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522148738365&di=79503ff6a25529830db81d552406fe5b&imgtype=0&src=http%3A%2F%2Fs1.sinaimg.cn%2Fmw690%2F006gT0H1zy72SxLFgTLc9" class="goods-img"></image>
+                </view>
+                <view class="goods-inifo-text col-xs-6">{{item.describe}}</view>
+                <view class="goods-inifo-text1 col-xs-2">
+                  <view >{{item.integral}}</view>
+                  <view class="small-text ">x{{item.number}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="clear" style="padding:5px 0;background-color:#fff;">
+                <view class="text-box">
+                  共<text style="padding: 0 2px;">{{item.number}}</text>件   总计：<text style="padding: 0 2px;">{{item.integral}}</text>
+                </view>
+                <view  class="text-box">
+                  <navigator class="text-box-border" url="{{item.state === 'ready' ? '../order/order' : '../orderdetail/orderdetail'}}">{{navigator[item.state]}}</navigator>
+                </view>
+            </view>
+          </view>
+        </view> -->
+        <!-- 全部 -->
+        <!-- <view class="" hidden="{{activeIndex != 3}}">
+          <view class="myorder all" wx:for="{{orders}}" wx:key="{{item.id}}">
+            <view class="re-container clear">
+              <view class="col-xs-6 item-left" >{{item.date}}</view>
+              <view class="col-xs-6 item-right">{{state[item.state]}}</view>
+            </view>
+            <view class="order-goods clear">
+              <view class="clear">
+                <view class="order-img-group col-xs-4">
+                  <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522148738365&di=79503ff6a25529830db81d552406fe5b&imgtype=0&src=http%3A%2F%2Fs1.sinaimg.cn%2Fmw690%2F006gT0H1zy72SxLFgTLc9" class="goods-img"></image>
+                </view>
+                <view class="goods-inifo-text col-xs-6">{{item.describe}}</view>
+                <view class="goods-inifo-text1 col-xs-2">
+                  <view >{{item.integral}}</view>
+                  <view class="small-text ">x{{item.number}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="clear" style="padding:5px 0;background-color:#fff;">
+                <view class="text-box">
+                  共<text style="padding: 0 2px;">{{item.number}}</text>件  总计：<text style="padding: 0 2px;">{{item.integral}}</text>
+                </view>
+                <view  class="text-box">
+                  <view wx:if="{{item.state === 'deliver'}}" style="color: red;">等待商家发货</view>
+                  <navigator wx:else class="text-box-border" url="{{item.state === 'ready' ? '../order/order' : '../orderdetail/orderdetail'}}">{{navigator[item.state]}}</navigator>
+                </view>
+            </view>
+          </view>
+        </view> -->
+
+        <!-- 模态框 -->
+        <view hidden="{{!(showIcon)}}" class=" modal-container">
+          <view class="my-modal">
+            <view class="top-container">
+              <view class="top-title">物流状态</view>
+              <view class="top-content">
+               <image class="item-left" src="{{goodsUrl}}"></image>
+               <view class="item-right"></view>
+              </view>
+            </view>
+            <view class="content">
+            <scroll-view scroll-y class="scroll-content">
+            
+              <view class="logitem-container">
+                <view class="logitem left"><view class="top">17:38</view><view class="down">03月25</view></view>
+                <view class="logitem right">[收件地址]上海上海市浦东新区金杨新村街道栖山路1588弄5号楼201室
+                  <view class="ok-icon"><image class="icon-img"  src="{{okUrl}}" alt="ok-icon"></image></view>
+                </view>
+              </view>
+
+              <view class="logitem-container">
+                <view class="logitem left"><view class="top">17:38</view><view class="down">03月25</view></view>
+                <view class="logitem right">[收件地址]上海上海市浦东新区金杨新村街道栖山路1588弄5号楼201室
+                  <view class="ok-icon"><image class="icon-img"  src="{{okUrl}}" alt="ok-icon"></image></view>
+                </view>
+              </view>
+
+              <view class="logitem-container">
+                <view class="logitem left"><view class="top">17:38</view><view class="down">03月25</view></view>
+                <view class="logitem right">[收件地址]上海上海市浦东新区金杨新村街道栖山路1588弄5号楼201室
+                  <view class="ok-icon"><image class="icon-img"  src="{{okUrl}}" alt="ok-icon"></image></view>
+                </view>
+              </view>
+
+              <view class="logitem-container">
+                <view class="logitem left"><view class="top">17:38</view><view class="down">03月25</view></view>
+                <view class="logitem right">[收件地址]上海上海市浦东新区金杨新村街道栖山路1588弄5号楼201室
+                  <view class="ok-icon"><image class="icon-img"  src="{{okUrl}}" alt="ok-icon"></image></view>
+                </view>
+              </view>
+
+            </scroll-view>
+
+            <view class="bottom-content">
+              <text>本数据由<text style="color: #63B8FF;">物流公司</text>提供</text>
+            </view>
+            </view>
+          </view>
+          <image class="close-icon" src="{{closeUrl}}" alt="close-icon" hidden="{{!(showIcon)}}" bindtap="hideLogistics"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

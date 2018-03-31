@@ -1,0 +1,35 @@
+<template name="index$538327c2">
+  <view class="_div data-v-156e1152 address-container">
+    <view class="_div data-v-156e1152 list-container">
+      <view class="_div data-v-156e1152 list-item">
+        <label class="_span data-v-156e1152">收件人</label>
+        <input class="_input data-v-156e1152 list-item-right" type="text"
+          name="addressee" placeholder="请输入收件人" />
+      </view>
+      <view class="_div data-v-156e1152 list-item">
+        <label class="_span data-v-156e1152">手机号码</label>
+        <input class="_input data-v-156e1152 list-item-right" type="number"
+          name="telephone" placeholder="请输入手机号码" value="{{phone}}" bindinput="handleProxy"
+          data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+      </view>
+      <view class="_div data-v-156e1152 list-item">
+        <label class="_span data-v-156e1152">收获地址</label>
+        <picker class="_picker data-v-156e1152 list-item-right address-select"
+          mode="region" value="region" bindchange="handleProxy" data-eventid="{{'1'}}"
+          data-comkey="{{$k}}">
+          <view class="_div data-v-156e1152">{{region[0]}}-{{region[1]}}-{{region[2]}}</view>
+        </picker>
+      </view>
+      <view class="_div data-v-156e1152 list-item areaClass">
+        <label class="_span data-v-156e1152">详细地址</label>
+        <textarea class="_textarea data-v-156e1152 list-item-right"
+          name="detailAddress" id="#detailAddress" cols="10" rows="6" placeholder="请输入详细地址"
+        />
+      </view>
+    </view>
+    <button type="primary" bindtap="handleProxy" class="_button data-v-156e1152 add-address"
+      data-eventid="{{'2'}}" data-comkey="{{$k}}">
+      确定
+    </button>
+  </view>
+</template>

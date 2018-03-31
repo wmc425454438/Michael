@@ -1,0 +1,92 @@
+.mall-container{
+  width:100%;
+  height:100%;
+}
+.mall-info{
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  background: #f3eee5;
+  padding:70rpx 30rpx 40rpx 30rpx;
+}
+.mall-info-image{
+  width:120rpx;
+  height:120rpx;
+  border:2px solid #a3d876;
+  border-radius:100%;
+}
+.mall-info-name{
+  padding-left:20rpx;
+}
+.mall-username{
+  height:50rpx;
+  font-size:16px;
+  line-height: 50rpx;
+  color:#4d4d4d;
+}
+.head-img{
+  box-sizing: border-box;
+  width:100%;
+  height:380rpx;
+}
+.mall-username-text,.mall-username-number{
+  height:50rpx;
+  line-height: 50rpx;
+  font-size:14px;
+  padding-right:6rpx;
+}
+.mall-username-text{
+  color:#4d4d4d;
+}
+.mall-username-number{
+  color:#f5b11e;
+}
+.mall-group{
+  padding:10px 10px 0 10px;
+}
+.mall-contnet{
+  /* position: absolute;
+  top:238rpx;
+  width:100%;
+  left:0; */
+}
+.mall-box{
+  background-color:#fff;
+  border-radius:6px;
+  overflow: hidden;
+}
+.mall-title{
+  padding:10rpx 0;
+  font-size:14px;
+  color:#4d4d4d;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+}
+.mall-name{
+  padding:10rpx 2rpx;
+  font-size:12px;
+  color:#c2c2c2;
+}
+
+.mall-img{
+  width:100%;
+  height:260rpx;
+  margin:0 auto;
+  display: block;
+  /* border-radius:8px; */
+  position: relative;
+}
+.mall-number{
+  padding:4rpx 10rpx;
+  font-size:10px;
+  color:white;
+  background-color:#8acfff;
+  border-radius:8px;
+  position: absolute;
+  top:10rpx;
+  right:10rpx;
+}

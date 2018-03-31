@@ -1,0 +1,46 @@
+<template name="index$451c31fc">
+  <view class="_div data-v-7407b9be integral-container">
+    <view class="_div data-v-7407b9be top-div-container">
+      <image class="_img data-v-7407b9be icon" src="{{integUrl}}" alt="integ-icon"></image>
+      <label class="_span data-v-7407b9be top-div-text">我的积分: </label>
+      <label class="_span data-v-7407b9be top-div-text score">1687</label>
+      <label bindtap="handleProxy" class="_span data-v-7407b9be top-div-text news"
+        data-eventid="{{'0'}}" data-comkey="{{$k}}">如何赚取积分？</label>
+    </view>
+    <view style="background: #efefef; height:15rpx; width:100%;" class="_div data-v-7407b9be"></view>
+    <view class="_div data-v-7407b9be tab-bar">
+      <view class="_div data-v-7407b9be tab-item {{(isselected == 0)? 'selected' : ' '}}"
+        bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">收入</view>
+      <view class="_div data-v-7407b9be tab-item {{(isselected == 1)? 'selected' : ' '}}"
+        bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">支出</view>
+    </view>
+    <view class="_div data-v-7407b9be list-container" hidden="{{!(isselected == 0)}}">
+      <view class="_div data-v-7407b9be list-item" wx:key="item.index" key="{{item.index}}"
+        wx:for="{{income}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-7407b9be list-left">
+          <view class="_div data-v-7407b9be list-text">{{item.source}}：{{item.way}}</view>
+          <view class="_div data-v-7407b9be list-date">{{item.date}}</view>
+        </view>
+        <view class="_div data-v-7407b9be list-right" style="color: red">+{{item.val}}</view>
+      </view>
+    </view>
+    <view class="_div data-v-7407b9be list-container" hidden="{{!(isselected == 1)}}">
+      <view class="_div data-v-7407b9be list-item" wx:key="item.index" key="{{item.index}}"
+        wx:for="{{expend}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-7407b9be list-left">
+          <view class="_div data-v-7407b9be list-text">{{item.source}}：{{item.way}}</view>
+          <view class="_div data-v-7407b9be list-date">{{item.date}}</view>
+        </view>
+        <view class="_div data-v-7407b9be list-right" style="color: green">-{{item.val}}</view>
+      </view>
+    </view>
+    <view hidden="{{!(showIcon)}}" class="_div data-v-7407b9be modal-container">
+      <view class="_div data-v-7407b9be my-modal">
+        <view class="_div data-v-7407b9be title">{{title}}</view>
+        <text class="_div data-v-7407b9be content">{{content}}</text>
+      </view>
+      <image class="_img data-v-7407b9be cancel-icon" src="{{cancelUrl}}" alt="cancle-icon"
+        hidden="{{!(showIcon)}}" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}"></image>
+    </view>
+  </view>
+</template>

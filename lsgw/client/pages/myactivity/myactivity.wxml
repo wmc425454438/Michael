@@ -1,0 +1,37 @@
+<!-- <view class="activity-top flex">我的活动</view> -->
+<view class="content flex" bindtap="showActivity">
+  <view class="content-img">
+    <image mode='aspectFill' src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=98796952,405228929&fm=27&gp=0.jpg' class="index-img"></image>
+    <view class="img-icon">线上</view>
+  </view>
+  <view class="contetn-box">
+    <view class="title">跟我走吧公益行走活动</view>
+    <view class="contet-list flex">
+      <view class="list-name">名额:</view>
+      <view class="list-number">1/16</view>
+    </view>
+    <view class="contet-list list-time flex">
+      <view class="list-name">时间:</view>
+      <view class="list-number">2018-03-27</view>
+    </view>
+    <view class="list-type {{conductFlag == '1'?'conduct-type':(endFlag == '1'?'full-type':'end-type')}}">{{conductFlag == '1'?'进行中':(endFlag == '1'?'人数已满':'已结束')}}</view>
+  </view>
+</view>
+<view class="content flex" bindtap="showActivity">
+  <view class="content-img">
+    <image mode='aspectFill' src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=98796952,405228929&fm=27&gp=0.jpg' class="index-img"></image>
+    <view class="img-icon">线下</view>
+  </view>
+  <view class="contetn-box">
+    <view class="title">跟我走吧公益行走活动</view>
+    <view class="contet-list flex">
+      <view class="list-name">名额:</view>
+      <view class="list-number">1/16</view>
+    </view>
+    <view class="contet-list list-time flex">
+      <view class="list-name">时间:</view>
+      <view class="list-number">2018-03-27</view>
+    </view>
+    <view class="list-type {{conductFlag == '1'?'conduct-type':(endFlag == '1'?'full-type':'end-type')}}">{{conductFlag == '1'?'进行中':(endFlag == '1'?'人数已满':'已结束')}}</view>
+  </view>
+</view>

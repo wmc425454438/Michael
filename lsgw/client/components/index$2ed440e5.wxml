@@ -1,0 +1,43 @@
+<import src="card$40845278" />
+<template name="index$2ed440e5">
+  <view style="user-container" class="_div data-v-ee625c32">
+    <view class="_div data-v-ee625c32 userinfo-container">
+      <view class="_div data-v-ee625c32 userinfo">
+        <image class="_img data-v-ee625c32 userinfo-avatar" wx:if="{{userInfo.avatarUrl}}"
+          src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <view class="_div data-v-ee625c32 userinfo-nickname">
+          <template data="{{...$root[$kk+'0'], $root}}" is="card$40845278"></template>
+        </view>
+      </view>
+    </view>
+    <view style="background: #efefef; height:15rpx; width:100%;" class="_div data-v-ee625c32"></view>
+    <view class="_div data-v-ee625c32 list-container">
+    <navigator class="_navigator data-v-ee625c32 list-item" url="../myorder/myorder">
+        <image class="_img data-v-ee625c32 img-avatar" src="{{giftsUrl}}" alt="user-avatar"></image>
+        <label class="_span data-v-ee625c32">我的商品</label>
+        <view class="_div data-v-ee625c32 arrow_class"></view>
+      </navigator>
+      <navigator class="_navigator data-v-ee625c32 list-item" url="../integral/integral">
+        <image class="_img data-v-ee625c32 img-avatar" src="{{integUrl}}" alt="user-avatar"></image>
+        <label class="_span data-v-ee625c32">我的积分</label>
+        <view class="_div data-v-ee625c32 arrow_class"></view>
+      </navigator>
+      <navigator class="_navigator data-v-ee625c32 list-item" url="../myactivity/myactivity">
+        <image class="_img data-v-ee625c32 img-avatar" src="{{calendarUrl}}" alt="user-avatar"></image>
+        <label class="_span data-v-ee625c32">我的活动</label>
+        <view class="_div data-v-ee625c32 arrow_class"></view>
+      </navigator>
+      <view class="_view data-v-ee625c32 list-item" bindtap="handleProxy" data-eventid="{{'0'}}"
+        data-comkey="{{$k}}">
+        <image class="_img data-v-ee625c32 img-avatar" src="{{boxUrl}}" alt="user-avatar"></image>
+        <label class="_span data-v-ee625c32">收货地址</label>
+        <view class="_div data-v-ee625c32 arrow_class"></view>
+      </view>
+      <navigator class="_navigator data-v-ee625c32 list-item xian" url>
+        <image class="_img data-v-ee625c32 img-avatar" src="{{atmUrl}}" alt="user-avatar"></image>
+        <label class="_span data-v-ee625c32">退出登录</label>
+        <view class="_div data-v-ee625c32 arrow_class"></view>
+      </navigator>
+    </view>
+  </view>
+</template>

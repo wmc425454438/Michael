@@ -1,0 +1,70 @@
+<view class="order-container">
+  <view class="order-username">
+    订单详情
+    <image src='../images/money.png' class="order-money"></image>
+  </view>
+  <!-- 收货地址 -->
+  <view class="order-address-group clear" bindtap="changeAddress" hidden="{{!addressHidden}}" bindtap="chooseAddress">
+    <view class="clear">
+      <view class="col-xs-6 clear">
+        <view class="order-address-name col-xs-5">收货人:</view>
+        <view class="order-address-name col-xs-7">{{addressInfo.userName}}</view>
+      </view>
+      <view class="order-address-name col-xs-6" style="text-align:right">{{addressInfo.telNumber}}</view>
+    </view>
+    <view class="clear">
+      <view class="order-address-name col-xs-3">收货地址:</view> 
+      <view class="order-address-name col-xs-9">{{addressInfo.provinceName}}{{addressInfo.cityName}}{{addressInfo.countyName}}{{addressInfo.detailInfo}}</view> 
+    </view>
+    <image src='../images/ac-address.png' class="roder-adderss-icon"></image>
+    <!-- 这里是个三角形 -->
+    <view class="roder-adderss-icon1 arrow_class"></view>
+  </view>
+
+  <view class="order-address-group clear" bindtap="chooseAddress" hidden="{{addressHidden}}">
+    <view class="address-choose">选择收货地址</view>
+  </view>
+
+  <view class="address-border" hidden="{{!addressHidden}}"></view> 
+
+  <!-- 收货地址 -->
+
+ 
+  <view class="order-info">
+    <view class="flex">
+      <view class="order-text">订单号:</view>
+      <view class="order-text">123456789</view>
+    </view>
+    <view class="flex">
+      <view class="order-text">创建时间:</view>
+      <view class="order-text">{{getDate}}</view>
+    </view>
+  </view>
+  <view class="order-info-title">订单信息</view>
+  <view class="order-goods">
+    <view class="clear">
+      <view class="order-img-group col-xs-4">
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522148738365&di=79503ff6a25529830db81d552406fe5b&imgtype=0&src=http%3A%2F%2Fs1.sinaimg.cn%2Fmw690%2F006gT0H1zy72SxLFgTLc9' class="goods-img"></image>
+      </view>
+      <view class="goods-inifo-text col-xs-6">高端剃须刀，剃须不留痕迹</view>
+      <view class="goods-inifo-text1 col-xs-2">1000</view>
+    </view>
+  </view>
+  <view class="clear" style='padding:20px 0;background-color:#fff;'>
+    <view class="col-xs-6 order-footer">商品数量</view>
+    <view class="col-xs-6" style="position:relative;height:60rpx;" >
+      <view class="goods-updata-create flex">
+        <view class="create" bindtap="updataOrderBtn">-</view>
+        <view class="goods-input">{{orderNumber}}</view>
+        <view class="create" bindtap="delectOrderBtn">+</view>
+      </view>
+    </view> 
+  </view>
+  <view class="clear" style='padding:20px 0;background-color:#fff;margin-top:10rpx;'>
+    <view class="order-footer col-xs-6">实支付积分</view>
+    <view class="order-footer order-footer1 col-xs-6">{{totalInteg}}<text style="padding: 0 2px;">分</text></view>
+  </view>
+  <view class="btn-group">
+    <button bindtap='orderOk' class="orderbtn">支付</button>
+  </view>
+</view>

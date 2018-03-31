@@ -1,0 +1,52 @@
+<view class="mall-container">
+  <!-- <view class="mall-info flex">
+    <image src='../images/ac-number.png' class="mall-info-image"></image>
+    <view class="mall-info-name">
+      <view class="mall-username">客户名</view>
+      <view class="flex">
+        <view class="mall-username-number">1000</view>
+        <view class="mall-username-text">积分</view>
+      </view>
+    </view>
+  </view> -->
+  <swiper style="height:380rpx;" indicator-dots="true" autoplay="{{true}}" current="0" interval="2000" duration="300" circular="{{true}}">
+    <swiper-item><image mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522148128678&di=955e5b74b726bdad55aa4f7c1ebb07c4&imgtype=0&src=http%3A%2F%2Fimg007.hc360.cn%2Fm1%2FM06%2F0C%2FE1%2FwKhQcFQyZl2ENbPiAAAAAKqgEsM016.jpg' class="head-img"></image></swiper-item>
+    <swiper-item><image mode='aspectFill' src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522148128678&di=329db36d25b1da8d19294464170e55d4&imgtype=0&src=http%3A%2F%2Fimg007.hc360.cn%2Fhb%2FMTQ1OTIzNDc3NzA3NC05Mjc3Nzk1OQ%3D%3D.jpg" class="head-img"></image></swiper-item>
+    <swiper-item><image mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522148128677&di=c3354071c2517f9a4b11143ee976afde&imgtype=0&src=http%3A%2F%2Fd7.yihaodianimg.com%2FN10%2FM04%2F8D%2FF0%2FChEi21Z4FDaALHIvAAVSCN4Ei2c65700.jpg' class="head-img"></image></swiper-item>
+  </swiper>
+  <view class=""></view>
+  <view class="mall-contnet clear">
+    <view class="col-xs-6 mall-group" bindtap="mallShor">
+      <view class="mall-box">
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522137365357&di=843802787f0cc68d1aca40acba162fe9&imgtype=0&src=http%3A%2F%2Fwww.zuyushop.com%2FcuxiaoPic%2F201510%2F2015100008184041748.png' class="mall-img">
+          <view class="mall-number">1000</view>
+        </image>
+        <view class="mall-title">高端电动牙刷</view>
+      </view>
+    </view>
+    <view class="col-xs-6 mall-group" bindtap="mallShor">
+      <view class="mall-box">
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522148738365&di=79503ff6a25529830db81d552406fe5b&imgtype=0&src=http%3A%2F%2Fs1.sinaimg.cn%2Fmw690%2F006gT0H1zy72SxLFgTLc9' class="mall-img">
+          <view class="mall-number">1000</view>
+        </image>
+        <view class="mall-title">电动剃须刀</view>
+      </view>
+    </view>
+    <view class="col-xs-6 mall-group" bindtap="mallShor">
+      <view class="mall-box">
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522148738365&di=79503ff6a25529830db81d552406fe5b&imgtype=0&src=http%3A%2F%2Fs1.sinaimg.cn%2Fmw690%2F006gT0H1zy72SxLFgTLc9' class="mall-img">
+          <view class="mall-number">1000</view>
+        </image>
+        <view class="mall-title">电动剃须刀</view>
+      </view>
+    </view>
+    <view class="col-xs-6 mall-group" bindtap="mallShor">
+      <view class="mall-box">
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522137365357&di=843802787f0cc68d1aca40acba162fe9&imgtype=0&src=http%3A%2F%2Fwww.zuyushop.com%2FcuxiaoPic%2F201510%2F2015100008184041748.png' class="mall-img">
+          <view class="mall-number">1000</view>
+        </image>
+        <view class="mall-title">高端电动牙刷</view>
+      </view>
+    </view>
+  </view>
+</view>

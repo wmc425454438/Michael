@@ -1,0 +1,85 @@
+/*下部导航需要  */
+.navigator-group{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  border-top:1px solid #b3b3b3;
+}
+.navigator-box{
+  padding-top:50rpx;
+  position: relative;
+}
+.navigator-icon{
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:44rpx;
+  height:44rpx;
+  margin-left:-20rpx;
+  margin-top:-20px;
+}
+.navigator-text{
+  height:36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  font-size:12px;
+}
+.navigator-button{
+  height:86rpx;
+  font-size:12px;
+  text-align: center;
+  line-height: 86rpx;
+  background-color:#63B8FF;
+  color:white;
+}
+.activity-image{
+  width:750rpx;
+  height:360rpx;
+}
+.activity-title{
+  padding:30rpx 18rpx;
+  font-size:14px;
+  border-bottom:1px solid #f3f3f3;
+  background-color:#fff;
+  font-weight: bold;
+}
+.activity-type{
+  width:130rpx;
+  height:40rpx;
+  border-radius:6rpx;
+  position: absolute;
+  top:30rpx;
+  right:30rpx;
+  background-color:#b3b3b3;
+  line-height: 40rpx;
+  font-size:12px;
+  color:#5b5b5b;
+  text-align: center;
+}
+.activity-list{
+  padding:30rpx 10rpx 30rpx 208rpx;
+  line-height: 34rpx;
+  position: relative;
+  font-size:14px;
+  color:#5b5b5b;
+  border-bottom:1px solid #f3f3f3;
+  background-color:#ffffff;
+}
+.activity-icon{
+  position: absolute;
+  top:30rpx;
+  left:18rpx;
+  width:36rpx;
+  height:36rpx;
+}
+.activity-name{
+  position: absolute;
+  top:32rpx;
+  left:68rpx;
+  width:140rpx;
+  height:30rpx;
+  line-height: 30rpx;
+  color:#b7b7b7;
+  font-size:14px;
+}

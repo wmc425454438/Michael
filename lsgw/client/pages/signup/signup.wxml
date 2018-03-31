@@ -1,0 +1,23 @@
+<view class="signup-title">
+  报名信息填写
+  <image src="{{userLogo}}" class="signup-img"></image>
+</view>
+<view class="signup-content">
+  <view class="signup-list">
+    <image src='../images/userName.png' class="signup-icon"></image>
+    <input type="text" placeholder="姓名" placeholder-class='signup-input-placeholder' adjust-position bindfocus="inputfocus" bindinput="inputblur1" class="signup-input {{inputType1?'':'error-border'}}"></input>
+  </view>
+  <view class="signup-list">
+    <image src='../images/tplhone.png' class="signup-icon"></image>
+    <input type="text" placeholder="电话" placeholder-class='signup-input-placeholder' adjust-position bindfocus="inputfocus" bindinput="inputblur2" class="signup-input {{inputType2?'':'error-border'}}"></input>
+  </view>
+  <view class="signup-list">
+    <image src='../images/email.png' class="signup-icon"></image>
+    <input type="text" placeholder="邮箱" placeholder-class='signup-input-placeholder' adjust-position bindfocus="inputfocus" bindinput="inputblur3" class="signup-input {{inputType3?'':'error-border'}}"></input>
+  </view>
+  <view class="signup-list">
+    <image src='../images/language.png' class="signup-icon"></image>
+    <input type="text" placeholder="留言(60字)" placeholder-class='signup-input-placeholder' adjust-position bindfocus="inputfocus" bindinput="inputblur4" class="signup-input"></input>
+  </view>
+  <button bindtap="submitBtn" class="signup-btn">提交</button>
+</view>
