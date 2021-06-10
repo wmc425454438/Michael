@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input" />
+<div id="text"></div>
+</body>
+<script>
+    let input = document.getElementById("input");
+    let text = document.getElementById("text");
+    let obj = new Proxy({}, {
+        get:function (target,key,receiver) {
+            return Reflect.get(target,key,receiver);
+        },
+        set:function (target,key,val,receiver) {
+            if(key === 'text'){
+              input.value = val;
+              text.innerText = val;
+            }     
+            return Reflect.set(target,key,val,receiver);
+        }
+    });
+    input.addEventListener('keyup',function (e) {
+        obj.text = e.target.value;
+    });
+</script>
+</html>
